@@ -22,6 +22,10 @@ jobs:
       - name: Permessi Gradle
         run: chmod +x gradlew
 
+      - name: Crea file local.properties
+        run: |
+          echo "spotify.client.id=fdc048cb764948b1b6984c5d3786b4cf" > local.properties
+
       - name: Compila APK
         run: ./gradlew assembleDebug --no-daemon
 
